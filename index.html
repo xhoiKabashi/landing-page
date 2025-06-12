@@ -1,73 +1,723 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Web Developer Landing Page</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Xhoi Kabashi – Senior Web Developer & UI Specialist</title>
+  <meta name="description" content="Professional portfolio of Xhoi Kabashi, a senior web developer specializing in React, TypeScript, and accessible UI design.">
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>John Doe</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+  <header class="navbar glass">
+    <div class="nav-content">
+      <div class="brand">
+        <span class="logo">XK</span>
+        <span>Xhoi Kabashi</span>
+      </div>
+      <nav id="nav-menu">
+        <a href="#about"><i class="fas fa-user"></i> About</a>
+        <a href="#skills"><i class="fas fa-code"></i> Skills</a>
+        <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
+        <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+        <a href="#testimonials"><i class="fas fa-quote-left"></i> Testimonials</a>
+        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
       </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.getElementById('nav-menu').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h2>I Build Modern Websites</h2>
-      <p>Front-End Developer | UX Enthusiast | Problem Solver</p>
-      <button onclick="scrollToContact()">Hire Me</button>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        I’m a passionate web developer with experience building responsive websites and web applications using HTML, CSS, JavaScript, and modern frameworks.
-      </p>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-list">
-        <div class="project-card">
-          <h3>Portfolio Website</h3>
-          <p>A responsive portfolio to showcase my work and skills.</p>
+  <main>
+    <!-- HERO -->
+    <section class="hero glass">
+      <div class="hero-bg"></div>
+      <div class="hero-particles" id="particles-js"></div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1>Hi, I'm Xhoi Kabashi<br><span class="gradient-text">Senior Web Developer & UI Specialist</span></h1>
+          <p class="subtitle">I transform complex problems into elegant, performant web solutions that drive business results and delight users.</p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary btn-glow">
+              <i class="fas fa-paper-plane"></i> Let's Work Together
+            </a>
+            <a href="#projects" class="btn btn-outline">
+              <i class="fas fa-eye"></i> View My Work
+            </a>
+          </div>
+          <div class="hero-social">
+            <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://dribbble.com" target="_blank" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+          </div>
         </div>
-        <div class="project-card">
-          <h3>Blog Platform</h3>
-          <p>A full-featured blog built using JavaScript and Firebase.</p>
+        <div class="hero-img">
+          <div class="profile-frame">
+            <img src="./image.jpeg" alt="Xhoi Kabashi" />
+            <div class="tech-badge react"><i class="fab fa-react"></i> React</div>
+            <div class="tech-badge typescript"><i class="fas fa-code"></i> TypeScript</div>
+            <div class="tech-badge node"><i class="fab fa-node-js"></i> Node</div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container card">
+        <h2 class="section-title"><span>About Me</span></h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p class="lead">
+              I'm a <strong>senior front-end engineer</strong> with a passion for creating exceptional digital experiences that balance aesthetic appeal with technical excellence.
+            </p>
+            <p>
+              With over 8 years in the industry, I've helped startups and Fortune 500 companies alike build web applications that are fast, accessible, and maintainable. My approach combines deep technical knowledge with an eye for design and user experience.
+            </p>
+            <p>
+              When I'm not coding, you can find me contributing to open source projects, mentoring junior developers, or speaking at tech conferences about modern front-end development practices.
+            </p>
+            <div class="about-buttons">
+              <a href="#" class="btn btn-primary">
+                <i class="fas fa-file-download"></i> Download CV
+              </a>
+              <a href="#contact" class="btn btn-outline">
+                <i class="fas fa-comment"></i> Let's Talk
+              </a>
+            </div>
+          </div>
+          <div class="about-image">
+            <div class="image-container">
+              <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Xhoi at work" />
+              <div class="image-overlay">
+                <i class="fas fa-award"></i> Web Development Specialist
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-grid">
+          <div class="about-card">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Education</h3>
+            <p>MSc in Computer Science<br>University of Tech, 2015</p>
+          </div>
+          <div class="about-card">
+            <i class="fas fa-certificate"></i>
+            <h3>Certifications</h3>
+            <ul>
+              <li>Google UX Design Professional</li>
+              <li>AWS Certified Developer</li>
+              <li>Accessibility Specialist</li>
+            </ul>
+          </div>
+          <div class="about-card">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Philosophy</h3>
+            <ul>
+              <li>Code should be clean and maintainable</li>
+              <li>Design should be inclusive</li>
+              <li>Performance is a feature</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>Email: john@example.com</p>
-      <p>LinkedIn: linkedin.com/in/johndoe</p>
-    </div>
-  </section>
+    <!-- SKILLS -->
+    <section id="skills" class="section glass">
+      <div class="container">
+        <h2 class="section-title"><span>Technical Skills</span></h2>
+        <p class="section-subtitle">I've worked with a wide range of technologies across the full web development stack.</p>
+        
+        <div class="skills-container">
+          <div class="skill-category">
+            <h3><i class="fas fa-laptop-code"></i> Frontend Development</h3>
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>React.js</span>
+                  <span>95%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 95%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>TypeScript</span>
+                  <span>90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Next.js</span>
+                  <span>88%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 88%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>JavaScript (ES6+)</span>
+                  <span>98%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 98%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill-category">
+            <h3><i class="fas fa-paint-brush"></i> UI/UX Design</h3>
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Figma</span>
+                  <span>92%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 92%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>CSS/SASS</span>
+                  <span>97%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 97%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Tailwind CSS</span>
+                  <span>85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>UI Animation</span>
+                  <span>80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill-category">
+            <h3><i class="fas fa-server"></i> Backend & DevOps</h3>
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Node.js</span>
+                  <span>85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Express</span>
+                  <span>82%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 82%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>MongoDB</span>
+                  <span>78%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 78%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Docker</span>
+                  <span>75%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 75%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tools-section">
+          <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+          <div class="tools-grid">
+            <div class="tool-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+              <span>Git</span>
+            </div>
+            <div class="tool-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg" alt="Webpack" />
+              <span>Webpack</span>
+            </div>
+            <div class="tool-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" alt="Jest" />
+              <span>Jest</span>
+            </div>
+            <div class="tool-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" />
+              <span>VS Code</span>
+            </div>
+            <div class="tool-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" />
+              <span>Figma</span>
+            </div>
+            <div class="tool-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg" alt="AWS" />
+              <span>AWS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 John Doe. All rights reserved.</p>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container card">
+        <h2 class="section-title"><span>Professional Journey</span></h2>
+        <p class="section-subtitle">My career path and key achievements along the way</p>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2022–Present</div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Senior Frontend Engineer</h3>
+                <span class="company">TechInnovate Inc.</span>
+                <span class="location"><i class="fas fa-map-marker-alt"></i> Remote</span>
+              </div>
+              <p>Lead the frontend development team building enterprise SaaS solutions with React and TypeScript. Spearheaded the migration from legacy Angular codebase to modern React architecture.</p>
+              <ul class="timeline-highlights">
+                <li><i class="fas fa-check-circle"></i> Improved application performance by 40% through code optimization</li>
+                <li><i class="fas fa-check-circle"></i> Implemented design system used across 5+ products</li>
+                <li><i class="fas fa-check-circle"></i> Mentored 3 junior developers to senior level</li>
+              </ul>
+              <div class="timeline-tech">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>GraphQL</span>
+                <span>Microfrontends</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">2019–2022</div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Frontend Developer</h3>
+                <span class="company">Digital Solutions Agency</span>
+                <span class="location"><i class="fas fa-map-marker-alt"></i> New York, NY</span>
+              </div>
+              <p>Developed custom web applications and e-commerce solutions for clients across various industries. Worked closely with designers to implement pixel-perfect UIs.</p>
+              <ul class="timeline-highlights">
+                <li><i class="fas fa-check-circle"></i> Delivered 15+ client projects on time and under budget</li>
+                <li><i class="fas fa-check-circle"></i> Reduced bundle size by 35% through code splitting</li>
+                <li><i class="fas fa-check-circle"></i> Introduced automated testing reducing bugs by 60%</li>
+              </ul>
+              <div class="timeline-tech">
+                <span>React</span>
+                <span>Redux</span>
+                <span>Styled Components</span>
+                <span>Shopify</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">2017–2019</div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Junior Web Developer</h3>
+                <span class="company">StartUp Ventures</span>
+                <span class="location"><i class="fas fa-map-marker-alt"></i> Boston, MA</span>
+              </div>
+              <p>Built and maintained features for startup's flagship product. Collaborated with cross-functional teams to implement new functionality and improve user experience.</p>
+              <ul class="timeline-highlights">
+                <li><i class="fas fa-check-circle"></i> Implemented responsive redesign increasing mobile conversions by 25%</li>
+                <li><i class="fas fa-check-circle"></i> Developed reusable component library saving 100+ dev hours</li>
+                <li><i class="fas fa-check-circle"></i> Optimized critical rendering path improving Lighthouse score by 30 points</li>
+              </ul>
+              <div class="timeline-tech">
+                <span>Angular</span>
+                <span>JavaScript</span>
+                <span>Bootstrap</span>
+                <span>Firebase</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="education-section">
+          <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+          <div class="education-item">
+            <div class="education-degree">MSc in Computer Science</div>
+            <div class="education-school">University of Technology, 2015</div>
+            <div class="education-details">Specialized in Human-Computer Interaction and Web Technologies</div>
+          </div>
+          <div class="education-item">
+            <div class="education-degree">BSc in Software Engineering</div>
+            <div class="education-school">State University, 2013</div>
+            <div class="education-details">Graduated with Honors, GPA 3.8/4.0</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section glass">
+      <div class="container">
+        <h2 class="section-title"><span>Featured Projects</span></h2>
+        <p class="section-subtitle">A selection of my recent work across various domains</p>
+        
+        <div class="project-tabs">
+          <button class="tab-btn active" data-category="all">All</button>
+          <button class="tab-btn" data-category="react">React</button>
+          <button class="tab-btn" data-category="ecommerce">E-commerce</button>
+          <button class="tab-btn" data-category="dashboard">Dashboards</button>
+          <button class="tab-btn" data-category="design">UI/UX</button>
+        </div>
+        
+        <div class="project-list">
+          <div class="project-card card" data-category="react dashboard">
+            <div class="project-media">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Analytics Dashboard" class="project-img"/>
+              <div class="project-links">
+                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-category">React • Dashboard</div>
+              <h3>Enterprise Analytics Platform</h3>
+              <p>A comprehensive data visualization dashboard for business intelligence with real-time updates, custom reporting, and interactive charts.</p>
+              <div class="project-tech">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>D3.js</span>
+                <span>WebSockets</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card card" data-category="ecommerce react">
+            <div class="project-media">
+              <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="E-commerce Store" class="project-img"/>
+              <div class="project-links">
+                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-category">E-commerce • React</div>
+              <h3>Modern Fashion Store</h3>
+              <p>High-performance e-commerce platform with product filtering, cart management, and seamless checkout experience.</p>
+              <div class="project-tech">
+                <span>Next.js</span>
+                <span>Stripe</span>
+                <span>Tailwind CSS</span>
+                <span>Headless CMS</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card card" data-category="design ui/ux">
+            <div class="project-media">
+              <img src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="UI Design System" class="project-img"/>
+              <div class="project-links">
+                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Case Study</a>
+                <a href="#" class="project-link"><i class="fab fa-figma"></i> Figma</a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-category">UI/UX • Design System</div>
+              <h3>Modular Design System</h3>
+              <p>Comprehensive design system with reusable components, accessibility guidelines, and design tokens for consistent brand experiences.</p>
+              <div class="project-tech">
+                <span>Figma</span>
+                <span>Storybook</span>
+                <span>Styled System</span>
+                <span>Accessibility</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card card" data-category="react dashboard">
+            <div class="project-media">
+              <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="Project Management" class="project-img"/>
+              <div class="project-links">
+                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-category">React • Productivity</div>
+              <h3>Team Collaboration Tool</h3>
+              <p>Real-time project management application with task tracking, team messaging, and file sharing capabilities.</p>
+              <div class="project-tech">
+                <span>React</span>
+                <span>Firebase</span>
+                <span>Material UI</span>
+                <span>WebRTC</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="view-more">
+          <a href="#" class="btn btn-outline">
+            <i class="fas fa-book-open"></i> View All Projects
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section">
+      <div class="container card">
+        <h2 class="section-title"><span>Client & Colleague Testimonials</span></h2>
+        <p class="section-subtitle">What people I've worked with say about my work</p>
+        
+        <div class="testimonials-carousel">
+          <div class="testimonial active">
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <p>"Xhoi's technical expertise and attention to detail were instrumental in delivering our complex analytics dashboard ahead of schedule. His ability to translate business requirements into elegant technical solutions is unmatched."</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" class="testimonial-img" alt="Sarah Johnson"/>
+                <div class="author-info">
+                  <span class="author-name">Sarah Johnson</span>
+                  <span class="author-title">Product Director, TechCorp</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <p>"Working with Xhoi on our e-commerce redesign was a pleasure. He not only delivered exceptional code but also provided valuable UX insights that significantly improved our conversion rates. Highly recommended!"</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="testimonial-img" alt="Michael Chen"/>
+                <div class="author-info">
+                  <span class="author-name">Michael Chen</span>
+                  <span class="author-title">CEO, FashionForward</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <p>"As a team lead, Xhoi demonstrated exceptional leadership skills while mentoring junior developers. His code reviews were thorough and educational, raising the bar for our entire engineering team."</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" class="testimonial-img" alt="Amanda Rodriguez"/>
+                <div class="author-info">
+                  <span class="author-name">Amanda Rodriguez</span>
+                  <span class="author-title">Engineering Manager, DevSolutions</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <p>"The design system Xhoi created has become the foundation for all our digital products. His thoughtful approach to component architecture has saved us countless development hours."</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="https://randomuser.me/api/portraits/men/75.jpg" class="testimonial-img" alt="David Kim"/>
+                <div class="author-info">
+                  <span class="author-name">David Kim</span>
+                  <span class="author-title">Head of Design, CreativeLabs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-controls">
+          <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+          <div class="testimonial-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section class="section glass">
+      <div class="container">
+        <h2 class="section-title"><span>Latest Articles</span></h2>
+        <p class="section-subtitle">Sharing knowledge and insights from my experience</p>
+        
+        <div class="blog-grid">
+          <div class="blog-card card">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="React Performance" class="blog-img"/>
+            <div class="blog-content">
+              <div class="blog-category">React • Performance</div>
+              <h3>Optimizing React Applications for Peak Performance</h3>
+              <p>Practical techniques to identify and fix performance bottlenecks in your React applications.</p>
+              <div class="blog-meta">
+                <span><i class="far fa-calendar"></i> June 15, 2023</span>
+                <span><i class="far fa-clock"></i> 8 min read</span>
+              </div>
+              <a href="#" class="btn btn-link">Read Article <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <div class="blog-card card">
+            <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Design Systems" class="blog-img"/>
+            <div class="blog-content">
+              <div class="blog-category">UI/UX • Design Systems</div>
+              <h3>Building Scalable Design Systems in 2023</h3>
+              <p>How to create maintainable design systems that evolve with your product and team.</p>
+              <div class="blog-meta">
+                <span><i class="far fa-calendar"></i> May 28, 2023</span>
+                <span><i class="far fa-clock"></i> 10 min read</span>
+              </div>
+              <a href="#" class="btn btn-link">Read Article <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <div class="blog-card card">
+            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" alt="TypeScript" class="blog-img"/>
+            <div class="blog-content">
+              <div class="blog-category">TypeScript • Best Practices</div>
+              <h3>Advanced TypeScript Patterns for React Developers</h3>
+              <p>Leverage TypeScript's powerful type system to build more robust React applications.</p>
+              <div class="blog-meta">
+                <span><i class="far fa-calendar"></i> April 12, 2023</span>
+                <span><i class="far fa-clock"></i> 12 min read</span>
+              </div>
+              <a href="#" class="btn btn-link">Read Article <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="view-more">
+          <a href="#" class="btn btn-outline">
+            <i class="fas fa-newspaper"></i> View All Articles
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section glass">
+      <div class="container card">
+        <h2 class="section-title"><span>Get In Touch</span></h2>
+        <p class="section-subtitle">Have a project in mind or want to discuss potential opportunities?</p>
+        
+        <div class="contact-content">
+          <form id="contactForm" autocomplete="off">
+            <div class="form-row">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-row">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-row">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" placeholder="Project Inquiry" required />
+            </div>
+            <div class="form-row">
+              <label for="message">Your Message</label>
+              <textarea id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-glow">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <p id="formMsg"></p>
+          </form>
+          
+          <div class="contact-info">
+            <div class="info-card">
+              <i class="fas fa-envelope"></i>
+              <h3>Email</h3>
+              <a href="mailto:hello@xhoikabashi.com">hello@xhoikabashi.com</a>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Location</h3>
+              <p>New York, NY<br>Available for remote work worldwide</p>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-calendar-alt"></i>
+              <h3>Availability</h3>
+              <p>Currently accepting new projects<br>Response time: 1 business day</p>
+            </div>
+            <div class="contact-social">
+              <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="https://dribbble.com" target="_blank" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+              <a href="https://medium.com" target="_blank" aria-label="Medium"><i class="fab fa-medium-m"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer glass">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="logo">XK</span>
+        <span>Xhoi Kabashi</span>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="footer-legal">
+        <span>© 2023 Xhoi Kabashi. All rights reserved.</span>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
